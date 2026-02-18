@@ -1,0 +1,174 @@
+.catalog {
+    padding: 80px 40px;
+    background-color: var(--white);
+}
+
+.catalog__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: calc((100% - 60px) / 4);
+
+    border: 1px solid var(--blue);
+    border-radius: 10px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.card__link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.card:hover .card__title {
+    color: var(--white);
+}
+
+.card:hover .card__desc {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover .card__tag-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(47, 85, 151, 0.2);
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.card__content {
+    padding: 20px 20px 0 20px;
+}
+
+.card__title {
+    color: var(--blue);
+    margin-bottom: 12px;
+    transition: color 0.3s
+}
+
+.card__desc {
+    color: var(--blue);
+    transition: color 0.3s;
+}
+
+.card__image-wrapper {
+    display: flex;
+}
+
+.card__img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card--blue {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.card--blue .card__title {
+    color: var(--white);
+}
+
+.card--blue .card__desc,
+.card--blue .card__tag-label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card__tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.card__tags-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 6px;
+    padding: 6px 11px;
+    transition: all 0.2s ease;
+}
+
+.tag--link {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.tag--link:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+.card:hover .tag {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+@media (max-width: 1600px) {
+    .catalog__row {
+        max-width: 920px;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog__row {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 384px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 1366px) {
+    .catalog {
+        padding: 80px 30px;
+    }
+}
+@media (max-width: 768px) {
+    .catalog {
+        padding: 80px 20px;
+    }
+}
+@media (max-width: 475px) {
+    .catalog {
+        padding: 80px 10px;
+    }
+}

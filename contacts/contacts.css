@@ -1,0 +1,138 @@
+.contacts-hero {
+    background: var(--white);
+    padding: 100px 40px 0 40px;
+}
+
+.contacts-hero__container {
+    padding-top: 12px;
+}
+
+.contacts-hero__title {
+    color: var(--blue);
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.contacts-breadcrumbs {
+    margin-bottom: 38px !important;
+}
+
+.contacts-info {
+    background: var(--white);
+    padding: 40px 40px 60px 40px;
+}
+
+.contacts-info__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.contacts-info__block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contacts-info__label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--grey);
+}
+
+.contacts-info__value {
+    font-family: 'Inter-Medium', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: var(--ls-tight);
+    color: var(--black);
+    margin: 0;
+}
+
+.contacts-info__link {
+    text-decoration: none;
+    color: var(--blue);
+    transition: opacity 0.2s;
+}
+
+.contacts-info__link:hover {
+    opacity: 0.7;
+}
+
+.contacts-map {
+    background: var(--white);
+    padding: 0 40px 80px 40px;
+}
+
+.contacts-map__wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 450px;
+    background: var(--light-grey);
+}
+
+.contacts-map__wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .contacts-info__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts-hero {
+        padding: 90px 20px 0 20px;
+    }
+
+    .contacts-info {
+        padding: 32px 20px 40px 20px;
+    }
+
+    .contacts-map {
+        padding: 0 20px 60px 20px;
+    }
+
+    .contacts-map__wrapper {
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contacts-info__grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contacts-info__value {
+        font-size: 18px;
+    }
+
+    .contacts-map__wrapper {
+        height: 300px;
+    }
+}
+
+@media (max-width: 475px) {
+    .contacts-hero {
+        padding: 90px 10px 0 10px;
+    }
+
+    .contacts-info {
+        padding: 24px 10px 30px 10px;
+    }
+
+    .contacts-map {
+        padding: 0 10px 40px 10px;
+    }
+}

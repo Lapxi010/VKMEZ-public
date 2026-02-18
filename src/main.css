@@ -1,0 +1,33 @@
+@import './style.css';
+
+@import './components/breadcrumbs.css';
+@import './components/pagination.css';
+@import './components/project-card.css';
+
+@import '../basic/header.css';
+@import '../basic/footer.css';
+
+@import '../basic/hero.css';
+@import '../basic/catalog.css';
+@import '../basic/about.css';
+@import '../basic/brand.css';
+@import '../basic/benefit.css';
+@import '../basic/feedback.css';
+@import '../basic/areas.css';
+
+@import '../catalog/catalog-inner.css';
+@import '../catalog/catalog-projects.css';
+
+@import '../products/products.css';
+
+@import '../product/pd-hero.css';
+@import '../product/pd-sidebar.css';
+@import '../product/pd-modals.css';
+@import '../product/pd-content.css';
+
+@import '../projects/projects.css';
+@import '../projects/project-detail.css';
+
+@import '../contacts/contacts.css';
+
+@import '../basic/certificates.css';

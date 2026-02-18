@@ -1,0 +1,77 @@
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pg-list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.pg-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    transition: all 0.2s;
+}
+
+.pg-link:hover {
+    color: var(--blue);
+    background-color: #F0F4FA;
+}
+
+.pg-link--active {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.pg-link--active:hover {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.pg-dots {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.pg-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pg-arrow:not(:disabled):hover svg path {
+    stroke: var(--blue);
+}
+
+.pg-arrow:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+@media (max-width: 600px) {
+    .pg-link {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    .pagination-wrapper {
+        gap: 10px;
+    }
+}

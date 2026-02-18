@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Просмотр исходного кода компонентов UI Kit проекта ВКЭМЗ.">
+    <title>Code Editor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background: #1e1e1e;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #252526;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #333;
+        }
+
+        .sidebar-title {
+            color: #bbb;
+            font-size: 12px;
+            padding: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .file-tab {
+            padding: 8px 15px;
+            cursor: pointer;
+            color: #ccc;
+            font-size: 14px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .file-tab:hover {
+            background: #2a2d2e;
+        }
+
+        .file-tab.active {
+            background: #37373d;
+            color: #fff;
+            border-left: 2px solid #007acc;
+        }
+
+        .main-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .split-view {
+            flex: 1;
+            display: flex;
+        }
+
+        #editor-container {
+            flex: 1;
+            height: 100%;
+        }
+
+        .preview-container {
+            width: 40%;
+            border-left: 1px solid #333;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .preview-header {
+            background: #2d2d2d;
+            color: #ccc;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-bottom: 1px solid #333;
+        }
+
+        iframe {
+            flex: 1;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .back-btn {
+            margin-top: auto;
+            padding: 15px;
+            color: #888;
+            text-decoration: none;
+            font-size: 13px;
+            border-top: 1px solid #333;
+        }
+
+        .back-btn:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="sidebar-title">Explorer</div>
+    <div class="file-tab active" onclick="switchFile('html')">index.html</div>
+    <div class="file-tab" onclick="switchFile('css')">style.css</div>
+    <a href="/" class="back-btn">← На главную</a>
+</div>
+
+<div class="main-area">
+    <div class="split-view">
+        <div id="editor-container"></div>
+        <div class="preview-container">
+            <div class="preview-header">Live Preview</div>
+            <iframe src="/ui-kit/" id="preview-frame" title="Предпросмотр UI Kit"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.min.js"></script>
+
+<script>
+    let editor;
+    const files = {
+        html: {name: 'index.html', content: '', lang: 'html'},
+        css: {name: 'style.css', content: '', lang: 'css'}
+    };
+
+    require.config({paths: {'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs'}});
+
+    require(['vs/editor/editor.main'], async function () {
+
+        try {
+            const htmlRes = await fetch('/ui-kit/index.html');
+            files.html.content = await htmlRes.text();
+        } catch (e) {
+            files.html.content = "Ошибка загрузки HTML";
+        }
+
+        try {
+            const cssRes = await fetch('/style.css');
+            files.css.content = await cssRes.text();
+        } catch (e) {
+            files.css.content = "/* Ошибка загрузки CSS */";
+        }
+
+        editor = monaco.editor.create(document.getElementById('editor-container'), {
+            value: files.html.content,
+            language: 'html',
+            theme: 'vs-dark',
+            automaticLayout: true,
+            readOnly: true,
+            minimap: {enabled: false}
+        });
+    });
+
+    function switchFile(type) {
+        document.querySelectorAll('.file-tab').forEach(el => el.classList.remove('active'));
+        event.target.classList.add('active');
+
+        if (editor) {
+            editor.setValue(files[type].content);
+            monaco.editor.setModelLanguage(editor.getModel(), files[type].lang);
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.policy-hero {
+    padding: 100px 40px 0 40px;
+}
+.policy-content {
+    padding: 0 40px 20px 40px;
+}
+
+.warranty-hero__title {
+    color: var(--blue) !important;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.policy-content__title {
+    color: var(--blue) !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.breadcrumbs-polytico {
+    margin-bottom: 38px !important;
+}

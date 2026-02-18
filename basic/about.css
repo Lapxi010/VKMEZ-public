@@ -1,0 +1,140 @@
+.about {
+    padding: 60px 40px 80px 40px;
+    background-color: var(--white);
+}
+
+.about__container {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.about__container::after {
+    content: "";
+    display: block;
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+
+    width: 225px;
+    height: 225px;
+
+    border-bottom: 2px solid var(--blue);
+    border-right: 2px solid var(--blue);
+
+    opacity: 0.4;
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: opacity 0.2s;
+}
+
+.slider-arrow:hover {
+    opacity: 0.7;
+}
+
+.slider-arrow--prev { left: 10px; }
+.slider-arrow--next { right: 10px; }
+
+.about__content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about__visuals {
+    flex: 2;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    aspect-ratio: 1190 / 672;
+}
+
+.about__main-wrapper {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.about__main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.about__thumb-wrapper {
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    min-height: 0;
+}
+
+.about__thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+.about__thumb-wrapper:hover .about__thumb {
+    opacity: 0.8;
+}
+
+.about__info {
+    flex: 1;
+}
+
+@media (max-width: 900px) {
+    .about__content {
+        flex-direction: column-reverse;
+    }
+
+    .about__container::after {
+        display: none;
+    }
+
+    .about__visuals {
+        width: 100%;
+    }
+    .about__info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .about__visuals {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        aspect-ratio: auto;
+    }
+
+    .about__main-wrapper {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        aspect-ratio: 4 / 3;
+        margin-bottom: 10px;
+    }
+
+    .about__thumb-wrapper {
+        aspect-ratio: 1 / 1;
+    }
+}

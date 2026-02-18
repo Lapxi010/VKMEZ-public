@@ -1,0 +1,93 @@
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/imgs/bg.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    padding: 0 40px;
+}
+
+.hero__container {
+    width: 100%;
+}
+
+.hero__subtitle {
+    margin-top: 345px;
+}
+
+.hero__title {
+    margin-top: 24px;
+}
+
+.hero__btn {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 1600px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/imgs/bg-1600.jpg');
+    }
+}
+
+@media (max-width: 1366px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/imgs/bg-1366.jpg');
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/imgs/bg-1000.jpg');
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/imgs/bg-900.jpg');
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/imgs/bg-768.jpg');
+        padding: 0 20px;
+    }
+
+    .hero__btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        padding: 16px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/imgs/bg-600.jpg');
+    }
+}
+
+@media (max-width: 475px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/imgs/bg-475.jpg');
+        padding: 0 10px;
+    }
+
+    .hero__btn {
+        font-size: 14px;
+        padding: 14px 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../public/imgs/bg-360.jpg');
+    }
+}

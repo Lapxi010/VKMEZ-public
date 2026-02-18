@@ -1,0 +1,180 @@
+.footer {
+    color: var(--white);
+    padding: 32px 40px 24px 40px;
+    font-family: 'Inter', sans-serif;
+    margin-top: auto;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.8fr 1.2fr 2fr;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.footer__logo-link {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.footer__logo-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    margin-top: -5px;
+    margin-left: 50px;
+}
+
+.footer__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer__nav a {
+    text-decoration: none;
+    color: var(--white);
+}
+.footer__col--contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer__phone {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer__email {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer__col--address {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+.social-link svg {
+    transition: opacity 0.2s;
+}
+
+.footer__col--address p {
+    text-transform: uppercase;
+}
+
+.social-link {
+    color: var(--white);
+}
+
+.footer__bottom {
+    border-top: 1px solid rgba(217,217,217, 0.5);
+
+    padding: 16px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: "Inter-Medium", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer__policy {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+.footer__policy:hover { color: #fff; }
+
+.footer__dev {
+    display: block;
+    width: 140px;
+    height: 25px;
+    background: url('../public/imgs/madeinintrid.svg') no-repeat center;
+    background-size: contain;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #2E3860;
+    line-height: 1;
+    text-decoration: none !important;
+    font-weight: 400;
+}
+
+.footer__dev:hover { opacity: 0.75; color: #2E3860; }
+
+@media (max-width: 1366px) {
+    .footer {
+        padding: 32px 30px 24px 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer__col--logo { grid-column: 1 / -1; }
+
+    .footer__col--address { grid-column: 1 / -1; margin-top: 10px; }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer {
+        text-align: left;
+    }
+
+    .footer__nav { gap: 20px; }
+    .footer__nav a { font-size: 16px; }
+
+    .footer__phone { font-size: 18px; margin-bottom: 5px; display: block; }
+    .footer__email { font-size: 14px; }
+
+    .footer__socials { margin-top: 15px; }
+    .social-link svg { width: 28px; height: 28px; }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .footer__dev {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 475px) {
+    .footer {
+        padding: 40px 10px;
+    }
+}
