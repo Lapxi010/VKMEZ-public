@@ -26,8 +26,11 @@
 @import '../product/pd-content.css';
 
 @import '../projects/projects.css';
-@import '../projects/project-detail.css';
+@import '../project/project-detail.css';
 
 @import '../contacts/contacts.css';
+
+@import '../production/production.css';
+@import '../warranty/warranty.css';
 
 @import '../basic/certificates.css';

@@ -10,6 +10,7 @@
 
 .warranty-hero__title {
     color: var(--blue);
+    text-transform: uppercase;
     margin-top: 16px;
     margin-bottom: 24px;
 }
@@ -19,10 +20,9 @@
 }
 
 .warranty-hero__text {
-    color: var(--grey);
+    color: var(--black);
     letter-spacing: var(--ls-tight);
     max-width: 780px;
-    font-size: 24px;
 }
 
 .warranty-products {

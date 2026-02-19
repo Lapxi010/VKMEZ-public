@@ -8,7 +8,7 @@
 }
 
 .pd-breadcrumbs {
-    margin-bottom: 76px !important;
+    margin-bottom: 24px !important;
 }
 
 .breadcrumbs--dark .breadcrumbs__link {
@@ -31,8 +31,40 @@
 
 .pd-hero__title {
     color: var(--blue);
-    margin-bottom: 24px;
+    margin-bottom: 44px;
     text-transform: uppercase;
+}
+
+.pd-hero__meta {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.pd-hero__article {
+    font-family: 'Inter-Medium', sans-serif;
+    font-size: 14px;
+    color: var(--grey);
+}
+
+.pd-hero__brand {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Inter-Medium', sans-serif;
+    font-size: 14px;
+    color: var(--grey);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pd-hero__brand-logo {
+    height: 18px;
+    width: auto;
 }
 
 .pd-hero__grid {
@@ -43,6 +75,10 @@
 }
 
 .pd-hero__mobile-price {
+    display: none;
+}
+
+.pd-hero__meta--mobile {
     display: none;
 }
 
@@ -94,6 +130,30 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+}
+
+.pd-gallery__video-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(47, 85, 151, 0.85);
+    color: var(--white);
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Inter-Medium', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+    backdrop-filter: blur(4px);
+}
+
+.pd-gallery__video-btn:hover {
+    background: rgba(47, 85, 151, 1);
 }
 
 .pd-gallery__thumbs {
@@ -207,10 +267,17 @@
 @media (max-width: 768px) {
     .pd-breadcrumbs-section { padding: 90px 20px 0 20px; }
     .pd-hero { padding: 6px 20px 40px 20px; }
-    .pd-hero__title { margin-bottom: 16px; }
+    .pd-hero__title { margin-bottom: 8px; }
+    .pd-hero__meta { margin-bottom: 16px; }
+    .pd-gallery__main { aspect-ratio: 4/3; }
     .pd-hero__grid { grid-template-columns: 1fr; }
     .pd-hero__gallery { grid-column: auto; grid-row: auto; }
     .pd-hero__specs { grid-column: auto; grid-row: auto; }
+
+    .pd-hero__meta--mobile {
+        display: flex;
+        margin-bottom: 12px;
+    }
 
     .pd-hero__mobile-price {
         display: block;
@@ -257,4 +324,5 @@
 @media (max-width: 475px) {
     .pd-breadcrumbs-section { padding: 90px 10px 0 10px; }
     .pd-hero { padding: 6px 10px 24px 10px; }
+    .pd-gallery__main { aspect-ratio: 3/2; }
 }

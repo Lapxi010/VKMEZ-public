@@ -37,22 +37,20 @@ document.querySelectorAll('.certificates').forEach(section => {
         const itemWidth = getItemWidth();
         track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
 
-        prevBtn.disabled = currentIndex <= 0;
-        nextBtn.disabled = currentIndex >= getMaxIndex();
+        prevBtn.disabled = false;
+        nextBtn.disabled = false;
     }
 
     prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlider();
-        }
+        currentIndex--;
+        if (currentIndex < 0) currentIndex = getMaxIndex();
+        updateSlider();
     });
 
     nextBtn.addEventListener('click', () => {
-        if (currentIndex < getMaxIndex()) {
-            currentIndex++;
-            updateSlider();
-        }
+        currentIndex++;
+        if (currentIndex > getMaxIndex()) currentIndex = 0;
+        updateSlider();
     });
 
     let touchStartX = 0;
@@ -63,10 +61,12 @@ document.querySelectorAll('.certificates').forEach(section => {
     track.addEventListener('touchend', (e) => {
         const diff = touchStartX - e.changedTouches[0].screenX;
         if (Math.abs(diff) > 50) {
-            if (diff > 0 && currentIndex < getMaxIndex()) {
+            if (diff > 0) {
                 currentIndex++;
-            } else if (diff < 0 && currentIndex > 0) {
+                if (currentIndex > getMaxIndex()) currentIndex = 0;
+            } else {
                 currentIndex--;
+                if (currentIndex < 0) currentIndex = getMaxIndex();
             }
             updateSlider();
         }

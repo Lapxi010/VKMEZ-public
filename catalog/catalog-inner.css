@@ -1,3 +1,9 @@
+.hero--inner {
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
 .hero__content--inner {
     max-width: 1100px;
 }
@@ -17,7 +23,7 @@
 }
 
 .products {
-    padding: 100px 40px 120px 40px;
+    padding: 40px 40px 40px 40px;
     background-color: var(--white);
 }
 
@@ -92,8 +98,7 @@
 
     .hero--inner {
         padding-top: 100px;
-        min-height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
     }
 }
 

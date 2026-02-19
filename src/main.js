@@ -10,6 +10,8 @@ import '../projects/pagination.js';
 
 import '../product/product.js';
 
-import '../projects/project-detail.js';
+import '../project/project-detail.js';
 
 import '../basic/certificates';
+
+import './form-validation.js';

@@ -15,7 +15,7 @@ if (grid && paginationWrapper) {
         'КУНР НА БАЗЕ КОТЛОВ ROSSEN',
         'БЛОЧНАЯ ВАКУУМНАЯ ДЕАЭРАЦИОННАЯ УСТАНОВКА',
     ];
-    const images = ['../public/imgs/about-1.jpg', '../public/imgs/about-2.jpg', '../public/imgs/about-3.jpg'];
+    const images = ['../public/imgs/about-1.webp', '../public/imgs/about-2.webp', '../public/imgs/about-3.webp'];
 
     const mockProjects = Array.from({ length: 18 }, (_, i) => ({
         id: i + 1,
@@ -33,7 +33,7 @@ if (grid && paginationWrapper) {
         const items = mockProjects.slice(start, start + ITEMS_PER_PAGE);
 
         grid.innerHTML = items.map(p => `
-            <a href="/projects/project.html?id=${p.id}" class="project-card">
+            <a href="/project/index.html" class="project-card">
                 <div class="project-card__img-wrapper">
                     <img src="${p.img}" alt="${p.title}" class="project-card__img">
                     <div class="project-card__tags">

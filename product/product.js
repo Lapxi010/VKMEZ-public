@@ -31,6 +31,7 @@ if (sectionHeaders.length > 0) {
         '../public/imgs/cart-cat.png',
         '../public/imgs/cart-cat.png',
         '../public/imgs/cart-cat.png',
+        '../public/imgs/cart-cat.png',
     ];
 
     let currentImageIndex = 0;

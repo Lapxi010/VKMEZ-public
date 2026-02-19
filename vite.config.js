@@ -3,8 +3,8 @@ import { resolve } from 'path';
 
 export default defineConfig({
     server: {
-        host: '127.0.0.1',
-        port: 5173,
+      host: '127.0.0.1',
+      port: 3000,
     },
     build: {
         minify: false,
@@ -19,12 +19,13 @@ export default defineConfig({
                 products: resolve(__dirname, 'products/index.html'),
                 product: resolve(__dirname, 'product/index.html'),
                 projects: resolve(__dirname, 'projects/index.html'),
-                projectDetail: resolve(__dirname, 'projects/project.html'),
                 contacts: resolve(__dirname, 'contacts/index.html'),
                 production: resolve(__dirname, 'production/index.html'),
                 warranty: resolve(__dirname, 'warranty/index.html'),
-                project: resolve(__dirname, 'projects/project.html'),
                 polytic: resolve(__dirname, 'polytic/index.html'),
+                allcatalog:resolve(__dirname, 'all-catalog/index.html'),
+                project: resolve(__dirname, 'project/index.html'),
+                automatization: resolve(__dirname, 'automatization/index.html'),
             },
             output: {
                 entryFileNames: 'assets/[name].js',

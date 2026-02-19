@@ -134,6 +134,10 @@
 .pd-specs-modal__close {
     color: var(--blue);
     transition: color 0.2s;
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .pd-specs-modal__body {

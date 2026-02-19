@@ -185,11 +185,39 @@
     transition: color 0.3s;
 }
 
+.prod-card__article {
+    color: var(--grey);
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.prod-card__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    gap: 12px;
+}
+
 .prod-card__price {
     font-weight: 700;
     color: var(--blue);
-    margin-top: auto;
     transition: color 0.3s;
+}
+
+.prod-card__brand-logo {
+    height: 16px;
+    width: auto;
+    opacity: 0.7;
+    transition: filter 0.3s;
+}
+
+.prod-card:hover .prod-card__brand-logo {
+    filter: brightness(0) invert(1);
+}
+
+.prod-card:hover .prod-card__article {
+    color: var(--white);
 }
 
 .prod-card__img-wrap {

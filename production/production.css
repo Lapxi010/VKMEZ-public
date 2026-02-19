@@ -9,6 +9,7 @@
 
 .production-hero__title {
     color: var(--blue);
+    text-transform: uppercase;
     margin-top: 16px;
     margin-bottom: 0;
 }
@@ -30,7 +31,7 @@
 }
 
 .production-intro__text {
-    color: var(--grey);
+    color: var(--black);
     letter-spacing: var(--ls-tight);
 }
 

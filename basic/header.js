@@ -1,6 +1,9 @@
 const header = document.querySelector('.header');
 
 if (header) {
+    const cookies = document.querySelector('.wr-cookie-cookie-bar');
+    const cookieBtn = document.querySelector('.wr-cookie-close-cb');
+    const cookieBtn2 = document.querySelector('.wr-agree-close-cb');
     const dropDownMenuBtn = document.querySelector('.header__link--dropdown');
     const dropDownMenu = document.querySelector('.header__dropdown-menu');
     const arrow = document.querySelector('#cat-arrow');
@@ -12,6 +15,13 @@ if (header) {
     const burgerBtn = document.querySelector('.header__burger');
     const overlayMenu = document.getElementById('mobileMenuOverlay');
     const closeBtn = document.getElementById('mobileMenuClose');
+
+
+    if (cookieBtn && cookieBtn2) {
+        cookieBtn.addEventListener('click', (e) => {cookies.classList.add('close')})
+        cookieBtn2.addEventListener('click', (e) => {cookies.classList.add('close')})
+    }
+
 
     if (dropDownMenuBtn && dropDownMenu) {
         dropDownMenuBtn.addEventListener('mouseenter', (e) => {

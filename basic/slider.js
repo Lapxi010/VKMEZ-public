@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!mainImg) return;
 
     let images = [
-        '/imgs/main-about.jpg',
-        '/imgs/about-1.jpg',
-        '/imgs/about-2.jpg',
-        '/imgs/about-3.jpg'
+        '/imgs/main-about.webp',
+        '/imgs/about-1.webp',
+        '/imgs/about-2.webp',
+        '/imgs/about-3.webp'
     ];
 
     const thumbWrappers = document.querySelectorAll('.about__thumb-wrapper');
