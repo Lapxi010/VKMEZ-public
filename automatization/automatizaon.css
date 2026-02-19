@@ -1,0 +1,11 @@
+.warranty-hero__block {
+    display: flex;
+    font-size: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 6px;
+    padding: 6px 11px;
+    transition: all 0.2s ease;
+    max-width: 400px;
+    justify-content: center;
+}
