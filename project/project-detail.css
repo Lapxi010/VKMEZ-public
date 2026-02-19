@@ -1,0 +1,120 @@
+.project-detail-hero {
+    background: var(--white);
+    padding: 100px 40px 0 40px;
+}
+
+.project-detail {
+    padding: 25px 40px 120px 40px;
+    background-color: var(--white);
+}
+
+.project-detail__header {
+    margin-bottom: 40px;
+}
+
+.project-detail__title {
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 16px;
+}
+
+.project-detail__tags {
+    display: flex;
+    gap: 12px;
+}
+
+.project-detail__tag {
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.project-detail__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.project-detail__gallery-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.project-detail__body {
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.project-detail__desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 180%;
+    color: var(--black);
+}
+
+.project-detail__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--blue);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.project-detail__back:hover {
+    color: var(--light-blue);
+}
+
+@media (max-width: 900px) {
+    .project-detail__gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-detail-hero {
+        padding: 90px 20px 0 20px;
+    }
+
+    .project-detail {
+        padding: 20px 20px 80px 20px;
+    }
+
+    .project-detail__title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-detail__gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-detail__gallery-img {
+        height: 255px;
+    }
+
+    .project-detail {
+        padding: 20px 20px 50px 20px;
+    }
+}
+
+@media (max-width: 475px) {
+    .project-detail-hero {
+        padding: 90px 10px 0 10px;
+    }
+
+    .project-detail {
+        padding: 20px 10px 50px 10px;
+    }
+}
