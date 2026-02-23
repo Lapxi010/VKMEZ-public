@@ -1,6 +1,6 @@
 .brands {
     background-color: var(--white);
-    padding: 80px 40px;
+    padding: 80px 16px;
 }
 
 .brands__grid {
@@ -39,12 +39,12 @@
 
 @media (max-width: 1366px) {
     .brands {
-        padding: 80px 30px;
+        padding: 80px 12px;
     }
 }
 @media (max-width: 900px) {
     .brands {
-        padding: 50px 30px;
+        padding: 50px 12px;
     }
 
     .brands__grid {

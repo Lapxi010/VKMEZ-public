@@ -1,6 +1,6 @@
 .production-hero {
     background: var(--white);
-    padding: 100px 40px 0 40px;
+    padding: 100px 16px 0 16px;
 }
 
 .production-hero__container {
@@ -20,7 +20,7 @@
 
 .production-intro {
     background: var(--white);
-    padding: 40px 40px 60px 40px;
+    padding: 40px 16px 60px 16px;
 }
 
 
@@ -54,7 +54,7 @@
 
 .production-about {
     background: var(--white);
-    padding: 0 40px 80px 40px;
+    padding: 0 16px 80px 16px;
 }
 
 .production-about__text {
@@ -96,6 +96,12 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.production-slider__img:hover {
+    opacity: 0.8;
 }
 
 .production-slider__arrow {

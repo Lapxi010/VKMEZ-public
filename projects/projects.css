@@ -1,10 +1,10 @@
 .projects-hero {
     background: var(--white);
-    padding: 100px 40px 0 40px;
+    padding: 100px 16px 0 16px;
 }
 
 .projects-page {
-    padding: 25px 40px 120px 40px;
+    padding: 25px 16px 120px 16px;
     background-color: var(--white);
 }
 

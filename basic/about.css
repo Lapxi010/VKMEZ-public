@@ -1,5 +1,5 @@
 .about {
-    padding: 60px 40px 80px 40px;
+    padding: 60px 16px 80px 16px;
     background-color: var(--white);
 }
 
@@ -78,6 +78,7 @@
     object-fit: cover;
     display: block;
     transition: opacity 0.3s ease-in-out;
+    cursor: default;
 }
 
 .about__thumb-wrapper {

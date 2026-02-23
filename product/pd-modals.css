@@ -29,7 +29,7 @@
     z-index: 1;
     background: linear-gradient(180deg, var(--blue) 0%, #1A3058 100%);
     border-radius: 16px;
-    padding: 48px 40px;
+    padding: 48px 16px;
     width: 480px;
     max-width: 90vw;
     max-height: 90vh;
@@ -121,7 +121,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 30px;
+    padding: 24px 12px;
     flex-shrink: 0;
 }
 

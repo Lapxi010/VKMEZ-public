@@ -1,5 +1,5 @@
 .feedback {
-    padding: 60px 40px 120px 40px;
+    padding: 60px 16px 120px 16px;
     color: var(--white);
 }
 
@@ -124,11 +124,16 @@
 .policy-text a {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.policy-text a:hover {
+    color: var(--white);
 }
 
 @media (max-width: 1366px) {
     .feedback {
-        padding: 60px 30px 120px 30px;
+        padding: 60px 12px 120px 12px;
     }
 }
 

@@ -1,10 +1,10 @@
 .project-detail-hero {
     background: var(--white);
-    padding: 100px 40px 0 40px;
+    padding: 100px 16px 0 16px;
 }
 
 .project-detail {
-    padding: 25px 40px 120px 40px;
+    padding: 25px 16px 120px 16px;
     background-color: var(--white);
 }
 
@@ -45,6 +45,12 @@
     object-fit: cover;
     border-radius: 10px;
     display: block;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.project-detail__gallery-img:hover {
+    opacity: 0.8;
 }
 
 .project-detail__body {

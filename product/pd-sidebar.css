@@ -33,6 +33,12 @@
     font-size: 16px;
     white-space: nowrap;
     letter-spacing: var(--ls-btn);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pd-sidebar__btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(47, 85, 151, 0.3);
 }
 
 .pd-sidebar__warranty {

@@ -145,10 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const burgerBtn = document.querySelector('.header__burger');
         const overlayMenu = document.getElementById('mobileMenuOverlay');
         const closeBtn = document.getElementById('mobileMenuClose');
-        const menuMobileBtn = document.querySelector('.header__mobile-catalog');
-        const menuMobile = document.querySelector('#mobile-cat-menu');
-        const arrowMobile = document.querySelector('.cat-arrow--mobile');
-
         if (burgerBtn && overlayMenu && closeBtn) {
             burgerBtn.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -159,27 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
             closeBtn.addEventListener('click', () => {
                 overlayMenu.classList.remove('active');
                 document.body.style.overflow = '';
-            });
-        }
-
-        // Мобильный каталог (выпадашка внутри меню)
-        if (menuMobileBtn && menuMobile) {
-            menuMobile.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-
-            menuMobileBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const isOpen = menuMobile.classList.contains('open');
-
-                if (!isOpen) {
-                    menuMobile.classList.add('open');
-                    arrowMobile?.classList.add('arrow-rotate');
-                } else {
-                    menuMobile.classList.remove('open');
-                    arrowMobile?.classList.remove('arrow-rotate');
-                }
             });
         }
 
@@ -243,6 +218,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function initPhotoLightbox() {
+        const lb = document.getElementById('photoLightbox');
+        if (!lb) return null;
+        const lbImg = document.getElementById('photoLightboxImg');
+        const lbClose = document.getElementById('photoLightboxClose');
+        const lbOverlay = document.getElementById('photoLightboxOverlay');
+        const close = () => { lb.classList.remove('modal--open'); document.body.style.overflow = ''; };
+        if (lbClose) lbClose.addEventListener('click', close);
+        if (lbOverlay) lbOverlay.addEventListener('click', close);
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+        return (src) => { lbImg.src = src; lb.classList.add('modal--open'); document.body.style.overflow = 'hidden'; };
+    }
+
     function initAboutSlider() {
         const mainImg = document.getElementById('mainImage');
         if (!mainImg) return;
@@ -304,6 +292,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         render();
+
+        const openPhoto = initPhotoLightbox();
+        if (openPhoto) {
+            mainImg.addEventListener('click', () => openPhoto(mainImg.src));
+        }
     }
 
     function initProductPage() {
@@ -428,6 +421,11 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             if (lightboxClose) lightboxClose.addEventListener('click', closeLb);
             if (lightboxOverlay) lightboxOverlay.addEventListener('click', closeLb);
+        }
+
+        const openPhoto = initPhotoLightbox();
+        if (openPhoto) {
+            mainImage.addEventListener('click', () => openPhoto(mainImage.src));
         }
     }
 
@@ -612,6 +610,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 galleryEl.innerHTML = project.imgs
                     .map(src => `<img src="${src}" alt="${project.title}" class="project-detail__gallery-img">`)
                     .join('');
+
+                const openPhoto = initPhotoLightbox();
+                if (openPhoto) {
+                    galleryEl.querySelectorAll('.project-detail__gallery-img').forEach(img => {
+                        img.addEventListener('click', () => openPhoto(img.src));
+                    });
+                }
             }
 
             const descEl = document.getElementById('projectDesc');

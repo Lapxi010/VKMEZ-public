@@ -161,6 +161,29 @@ if (sectionHeaders.length > 0) {
     if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
     if (lightboxOverlay) lightboxOverlay.addEventListener('click', closeLightbox);
 
+    const photoLightbox = document.getElementById('photoLightbox');
+    const photoLightboxImg = document.getElementById('photoLightboxImg');
+    const photoLightboxClose = document.getElementById('photoLightboxClose');
+    const photoLightboxOverlay = document.getElementById('photoLightboxOverlay');
+
+    function closePhotoLightbox() {
+        if (photoLightbox) photoLightbox.classList.remove('modal--open');
+        document.body.style.overflow = '';
+    }
+
+    if (photoLightboxClose) photoLightboxClose.addEventListener('click', closePhotoLightbox);
+    if (photoLightboxOverlay) photoLightboxOverlay.addEventListener('click', closePhotoLightbox);
+
+    if (mainImage) {
+        mainImage.addEventListener('click', () => {
+            if (photoLightboxImg) photoLightboxImg.src = mainImage.src;
+            if (photoLightbox) {
+                photoLightbox.classList.add('modal--open');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    }
+
     document.querySelectorAll('[data-open-modal]').forEach(btn => {
         btn.addEventListener('click', () => {
             const modalId = btn.dataset.openModal;

@@ -23,7 +23,7 @@
 }
 
 .products {
-    padding: 40px 40px 40px 40px;
+    padding: 40px 16px 40px 16px;
     background-color: var(--white);
 }
 
@@ -80,6 +80,7 @@
 .product-card__title {
     text-transform: uppercase;
     color: var(--blue);
+    font-size: 14px;
 }
 .product-ceo__text {
     margin-top: 20px;

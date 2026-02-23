@@ -41,6 +41,30 @@ if (breadcrumbTitle) {
             .map(src => `<img src="${src}" alt="${project.title}" class="project-detail__gallery-img">`)
             .join('');
 
+        const photoLightbox = document.getElementById('photoLightbox');
+        const photoLightboxImg = document.getElementById('photoLightboxImg');
+        const photoLightboxClose = document.getElementById('photoLightboxClose');
+        const photoLightboxOverlay = document.getElementById('photoLightboxOverlay');
+
+        function closePhotoLightbox() {
+            if (photoLightbox) photoLightbox.classList.remove('modal--open');
+            document.body.style.overflow = '';
+        }
+
+        if (photoLightboxClose) photoLightboxClose.addEventListener('click', closePhotoLightbox);
+        if (photoLightboxOverlay) photoLightboxOverlay.addEventListener('click', closePhotoLightbox);
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closePhotoLightbox(); });
+
+        document.querySelectorAll('.project-detail__gallery-img').forEach(function(img) {
+            img.addEventListener('click', function() {
+                if (photoLightboxImg) photoLightboxImg.src = img.src;
+                if (photoLightbox) {
+                    photoLightbox.classList.add('modal--open');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
         document.getElementById('projectDesc').textContent = project.desc;
     }
 }

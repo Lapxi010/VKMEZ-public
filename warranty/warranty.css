@@ -1,6 +1,6 @@
 .warranty-hero {
     background: var(--white);
-    padding: 100px 40px 0 40px;
+    padding: 100px 16px 0 16px;
 }
 
 .warranty-hero__container {
@@ -27,7 +27,7 @@
 
 .warranty-products {
     background: var(--white);
-    padding: 0 40px 80px 40px;
+    padding: 0 16px 80px 16px;
 }
 
 .warranty-products__subtitle {
@@ -37,7 +37,7 @@
 }
 
 .warranty-limitations {
-    padding: 60px 40px;
+    padding: 60px 16px;
 }
 
 .warranty-limitations__container {
@@ -80,7 +80,7 @@
 
 .warranty-claim {
     background: var(--white);
-    padding: 60px 40px;
+    padding: 60px 16px;
 }
 
 .warranty-claim__container {
@@ -138,7 +138,7 @@
 }
 
 .warranty-service-contacts {
-    padding: 60px 40px 80px 40px;
+    padding: 60px 16px 80px 16px;
 }
 
 .warranty-service-contacts__container {
@@ -198,7 +198,7 @@
 }
 
 .warranty-form-section {
-    padding: 60px 40px 80px 40px;
+    padding: 60px 16px 80px 16px;
     color: var(--white);
 }
 
@@ -276,10 +276,10 @@
 
 @media (max-width: 1366px) {
     .warranty-limitations {
-        padding: 60px 30px;
+        padding: 60px 12px;
     }
     .warranty-claim {
-        padding: 60px 30px;
+        padding: 60px 12px;
     }
     .warranty-service-contacts {
         padding: 60px 30px 80px;

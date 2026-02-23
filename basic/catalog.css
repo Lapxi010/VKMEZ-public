@@ -1,5 +1,5 @@
 .catalog {
-    padding: 80px 40px;
+    padding: 80px 16px;
     background-color: var(--white);
 }
 
@@ -59,7 +59,8 @@
 .card__title {
     color: var(--blue);
     margin-bottom: 12px;
-    transition: color 0.3s
+    transition: color 0.3s;
+    text-transform: uppercase;
 }
 
 .card__desc {
@@ -99,12 +100,7 @@
     gap: 6px;
 }
 
-.card__tags-row {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 6px;
-    flex-wrap: wrap;
-}
+
 
 .tag {
     background-color: var(--blue);
@@ -131,12 +127,7 @@
     color: var(--blue);
 }
 
-@media (max-width: 1600px) {
-    .catalog__row {
-        max-width: 920px;
-        margin: 0 auto;
-    }
-
+@media (max-width: 1200px) {
     .card {
         width: calc((100% - 20px) / 2);
     }
@@ -159,7 +150,7 @@
 
 @media (max-width: 1366px) {
     .catalog {
-        padding: 80px 30px;
+        padding: 80px 12px;
     }
 }
 @media (max-width: 768px) {
