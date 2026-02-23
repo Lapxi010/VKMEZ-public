@@ -1823,58 +1823,6 @@ h3 {
     position: relative;
 }
 
-/*.header__social-btn::after {*/
-/*    content: attr(data-tooltip);*/
-
-/*    position: absolute;*/
-/*    top: 100%;*/
-/*    left: 50%;*/
-/*    transform: translateX(-50%) translateY(10px);*/
-
-/*    background-color: var(--grey);*/
-/*    color: var(--white);*/
-/*    padding: 6px 12px;*/
-/*    border-radius: 4px;*/
-/*    font-size: 12px;*/
-/*    font-family: 'Inter', sans-serif;*/
-/*    white-space: nowrap;*/
-/*    pointer-events: none;*/
-
-/*    opacity: 0;*/
-/*    visibility: hidden;*/
-/*    transition: all 0.2s ease;*/
-
-/*    z-index: 9999;*/
-/*}*/
-
-/*.header__social-btn::before {*/
-/*    content: "";*/
-/*    position: absolute;*/
-
-/*    top: 100%;*/
-/*    left: 50%;*/
-/*    transform: translateX(-50%) translateY(4px);*/
-
-/*    border: 6px solid transparent;*/
-/*    border-bottom-color: var(--grey);*/
-
-/*    opacity: 0;*/
-/*    visibility: hidden;*/
-/*    transition: all 0.2s ease;*/
-/*    z-index: 9999;*/
-/*}*/
-
-/*.header__social-btn:hover::after {*/
-/*    opacity: 1;*/
-/*    visibility: visible;*/
-/*    transform: translateX(-50%) translateY(5px);*/
-/*}*/
-
-/*.header__social-btn:hover::before {*/
-/*    opacity: 1;*/
-/*    visibility: visible;*/
-/*}*/
-
 .header__mobile-controls {
     display: flex;
     flex-direction: row;
@@ -2010,10 +1958,6 @@ h3 {
     color: var(--white);
 }
 
-/*.header__link--dropdown:hover svg path,*/
-/*.header__link--dropdown.open svg path {*/
-/*    stroke: var(--white);*/
-/*}*/
 .header__dropdown-menu {
     display: none;
 
@@ -3282,7 +3226,6 @@ h3 {
     .pd-hero { padding: 6px 10px 24px 10px; }
 }
 
-/* Lightbox — uses .modal + .overlay from style.css */
 .pd-lightbox__overlay { background: rgba(0, 0, 0, 0.7); }
 
 .pd-lightbox__content {
@@ -3307,7 +3250,6 @@ h3 {
     color: var(--white);
 }
 
-/* Form modal — uses .modal + .overlay from style.css */
 .pd-form-modal__overlay { background: rgba(0, 0, 0, 0.6); }
 
 .pd-form-modal__panel {
@@ -3372,7 +3314,6 @@ h3 {
     text-decoration: underline;
 }
 
-/* Specs modal — slide-in panel */
 .pd-specs-modal {
     display: none;
     position: fixed;
@@ -3452,7 +3393,6 @@ h3 {
     color: var(--grey);
 }
 
-/* Specs modal rows — layout from here, typography from shared specs-label/sep/value */
 .pd-specs-modal__row {
     display: flex;
     align-items: center;

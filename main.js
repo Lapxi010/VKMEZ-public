@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const dropDownMenu = document.querySelector('.header__dropdown-menu');
         const arrow = document.querySelector('#cat-arrow');
 
-        // Скролл хедера
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header?.classList.add('header--scrolled');
@@ -532,7 +531,6 @@ document.addEventListener('DOMContentLoaded', () => {
             city: cities[i % cities.length],
             year: `${2020 + (i % 6)} г.`,
             imgs: [images[i % images.length], images[(i + 1) % images.length], images[(i + 2) % images.length]],
-            // Используем первое фото как превью
             img: images[i % images.length],
             desc: 'С 2008 года команда инженеров ВКЭМЗ является сервисными партнерами...',
         }));
@@ -579,7 +577,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initProjectDetailPage() {
-        // Проверяем наличие уникального элемента страницы
         const titleEl = document.getElementById('projectTitle');
         if (!titleEl) return;
 
