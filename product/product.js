@@ -184,11 +184,17 @@ if (sectionHeaders.length > 0) {
         });
     }
 
+    const productTitle = document.querySelector('.pd-hero__title');
+    const requestModalTitle = document.getElementById('requestModalTitle');
+
     document.querySelectorAll('[data-open-modal]').forEach(btn => {
         btn.addEventListener('click', () => {
             const modalId = btn.dataset.openModal;
             const modal = document.getElementById(modalId);
             if (modal) {
+                if (modalId === 'requestModal' && requestModalTitle && productTitle) {
+                    requestModalTitle.innerHTML = 'Ваша заявка:<br/> <span style="color: var(--bg-input);">' + productTitle.textContent.trim() + '</span>';
+                }
                 modal.classList.add('modal--open');
                 document.body.style.overflow = 'hidden';
             }

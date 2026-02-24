@@ -6,7 +6,7 @@
 .realized-projects__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 40px;
 }
 
 .realized-projects__footer {

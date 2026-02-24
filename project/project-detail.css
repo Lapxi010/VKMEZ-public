@@ -54,7 +54,7 @@
 }
 
 .project-detail__body {
-    max-width: 900px;
+    max-width: 100%;
     margin-bottom: 40px;
 }
 

@@ -46,10 +46,10 @@
 
 .pd-form-modal__title {
     font-family: 'Oswald', sans-serif;
+    text-align: center;
     font-size: 28px;
     font-weight: 700;
     color: var(--white);
-    text-transform: uppercase;
     margin-bottom: 12px;
 }
 
@@ -57,6 +57,7 @@
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 28px;
     line-height: 150%;
+    text-align: center;
 }
 
 .pd-form-modal__form {

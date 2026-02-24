@@ -1,5 +1,9 @@
 import './main.css';
 
+document.querySelectorAll('.footer__copyright').forEach(el => {
+    el.textContent = `© ВКЭМЗ, ${new Date().getFullYear()}`;
+});
+
 import '../basic/header.js';
 import '../basic/hero-scroll.js';
 import '../basic/slider.js';

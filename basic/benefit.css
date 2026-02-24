@@ -90,9 +90,17 @@
     height: 48px;
 }
 
+.areas__heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 16px;
+}
+
 .areas__text {
     font-family: 'Oswald', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 15px;
     line-height: 130%;
     color: var(--black);
@@ -101,12 +109,12 @@
 
 @media (max-width: 1200px) {
     .benefits-areas__layout {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 3fr 2fr;
         gap: 40px;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .benefits-areas__layout {
         grid-template-columns: 1fr;
         gap: 40px;
