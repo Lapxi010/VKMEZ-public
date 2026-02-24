@@ -121,6 +121,15 @@
     filter: brightness(0) invert(1);
 }
 
+.card:hover .product-card__brand-label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card:hover .product-card__brand-logo {
+    filter: brightness(0) invert(1);
+}
+
+
 @media (max-width: 1200px) {
     .hero__title--inner {
         font-size: 40px;

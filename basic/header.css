@@ -11,7 +11,7 @@
 }
 
 .header--scrolled {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border-bottom: none;
 }
 
@@ -103,8 +103,8 @@
     gap: 6px;
     flex-shrink: 0;
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
+    font-family: 'Inter-Medium', sans-serif;
+    font-weight: 500;
     font-size: 16px;
     white-space: nowrap;
     transition: color 0.2s ease;
@@ -251,7 +251,7 @@
 
 .menu-item__brands-label {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--blue);
     opacity: 1;
@@ -259,6 +259,10 @@
     padding-right: 4px;
     flex-shrink: 0;
     cursor: auto;
+}
+
+.menu-item__sep {
+    border-bottom: 1px solid var(--light-grey);
 }
 
 .menu-item__brand {
@@ -308,6 +312,7 @@
     cursor: pointer;
     padding: 8px 16px;
     transition: all 0.2s ease-in-out;
+    text-decoration: none;
 }
 
 .header__link--dropdown:hover,
@@ -622,7 +627,7 @@
     padding: 14px 20px 8px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--blue);
     text-decoration: none;
 }
@@ -636,8 +641,8 @@
 .mobile-nav-subbrands-label {
     padding: 4px 20px 8px;
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: var(--blue);
     opacity: 0.85;
 }

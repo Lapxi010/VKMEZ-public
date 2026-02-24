@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             dropDownMenuBtn.addEventListener('click', e => {
+                e.preventDefault();
                 e.stopPropagation();
                 const isOpen = dropDownMenu.classList.contains('open');
                 toggleMenu(!isOpen);

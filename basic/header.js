@@ -19,6 +19,18 @@ if (header) {
     }
 
     if (dropDownMenuBtn && dropDownMenu) {
+        dropDownMenu.addEventListener('mouseenter', (e) => {
+            e.stopPropagation();
+            dropDownMenu.classList.add('open');
+            if (arrow) arrow.classList.add('arrow-rotate');
+        });
+
+        dropDownMenu.addEventListener('mouseleave', (e) => {
+            e.stopPropagation();
+            dropDownMenu.classList.remove('open');
+            if (arrow) arrow.classList.remove('arrow-rotate');
+        });
+
         dropDownMenuBtn.addEventListener('mouseenter', (e) => {
             e.stopPropagation();
             dropDownMenu.classList.add('open');
@@ -36,7 +48,6 @@ if (header) {
             if (e.target.closest('.header__dropdown-menu')) {
                 return;
             }
-            window.location.href = '/all-catalog/';
         });
     }
 
