@@ -28,9 +28,20 @@
 }
 
 .card__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card__link::after {
+    content: '';
     position: absolute;
     inset: 0;
     z-index: 1;
+}
+
+.card__tag-wrapper a {
+    position: relative;
+    z-index: 2;
 }
 
 .card:hover .card__title {
